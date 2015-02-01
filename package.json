@@ -1,7 +1,7 @@
 {
   "name": "echomail",
   "description": "echomail is a command line tool to send mails using Mandrill API. You will need a Mandrill account, create one here: https://mandrill.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "pmav",
   "keywords": [
     "echomail", "mail", "sendmail", "mandrill", "cli"

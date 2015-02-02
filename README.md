@@ -5,9 +5,8 @@ echomail is a command line tool to send mails using Mandrill API. You will need 
 ## Example
 The following line will send a mail to mail@example.org with the text "Hi!":
 
-    echo Hi! | echomail <Mandrill API Key> mail@example.org
+    echo Hi! | echomail -k <Mandrill API Key> -t mail@example.org
 
 ## TODO
-- ~~Read key from args~~
-- ~~Read mail from args~~
-- Flags: --help, --version, --key, --to, --to-name, --from, --from-name, --subject, --debug
+- ~~Done: --key, --to, --help, --version~~
+- In line: --to-name, --from, --from-name, --subject, --subject-prefix, --subject-max-length, --debug

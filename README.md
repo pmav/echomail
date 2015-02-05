@@ -16,10 +16,12 @@ Or in a cronjob:
 - [x] --to
 - [x] --help
 - [x] --version
-- [ ] --to-name
+- [x] --to-name
 - [x] --from
 - [x] --from-name
-- [ ] --subject
-- [ ] --subject-prefix
-- [ ] --subject-max-length
+- [x] --subject
+- [x] --subject-prefix
+- [x] --subject-max-length
+- [x] --allow-empty-message
 - [ ] --debug
+- [ ] Comments

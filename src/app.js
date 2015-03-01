@@ -5,7 +5,7 @@
  */
 var config = {
   debug : false,
-  version : '1.0.1',
+  version : '1.0.2',
 
   key : undefined,
 
@@ -55,6 +55,8 @@ function processArguments()
     .describe('allow-empty-message', 'Allow empty message body').boolean('allow-empty-message')
     .strict()
     .argv;
+
+  // Required.
 
   config.key = argv.key;
   config.to = config.toName = argv.to;
@@ -132,21 +134,23 @@ function sendmail()
     'ip_pool': 'Main Pool'
   };
 
-  function success(result) {
-    if (config.debug)
-      console.log(result);
-
-    process.exit(0);
-  }
-
-  function error(error) {
-    if (config.debug)
-      console.log('Error: ' + error.name + ' - ' + error.message);
-
-    process.exit(1);
-  }
-
   mandrill_client.messages.send(payload, success, error);
+}
+
+function success(result)
+{
+  if (config.debug)
+    console.log(result);
+
+  process.exit(0);
+}
+
+function error(error)
+{
+  if (config.debug)
+    console.log('Error: ' + error.name + ' - ' + error.message);
+
+  process.exit(1);
 }
 
 /**

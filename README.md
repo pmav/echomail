@@ -12,6 +12,8 @@ Or in a cronjob:
 
     */1 * * * * python /home/jinx/cpu-monitor.py | /usr/local/bin/echomail -k <Mandrill API Key> -t mail@example.org
 
+The command will return **0 on success** and **1 on fail**.
+
 ## Flags
 
 Flag | Short flag | Description | Required
@@ -27,6 +29,12 @@ Flag | Short flag | Description | Required
 --allow-empty-message | N/A | Allow empty message body | No
 --help | -h | Show help | No
 --version | -v | Show version | No
+
+## Examples
+
+    echo Hi! | echomail -k XXXXXXXXXX -t mail@example.org --subject "My subject"
+    echo Hi! | echomail -k XXXXXXXXXX -t mail@example.org --subject "My subject" --from-name Source#1
+    echo Hi! | echomail -k XXXXXXXXXX -t mail@example.org --subject-prefix MyTag
 
 ## TODO
 

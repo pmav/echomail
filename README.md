@@ -10,7 +10,7 @@ The following line will send a mail to mail@example.org with the text "Hi!":
 
 Or in a cronjob:
 
-    */1 * * * * python /home/jinx/cpu-monitor.py | /usr/local/bin/echomail -k <Mandrill API Key> -t mail@example.org
+    */1 * * * * python /home/jinx/cpu-monitor.py 2>&1 >/dev/null | /usr/local/bin/echomail -k <Mandrill API Key> -t mail@example.org
 
 The command will return **0 on success** and **1 on fail**.
 
